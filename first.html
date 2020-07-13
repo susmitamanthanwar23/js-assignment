@@ -1,0 +1,41 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <p id="sample"></p>
+        <p id="demo"></p>
+        
+        
+        <script>
+            var d=new Date;
+            var weekday = new Array(7);
+            weekday[0]="Sunday";
+            weekday[1]="Monday";
+            weekday[2]="Tuesday";
+            weekday[3]="Wednesday";
+            weekday[4]="Thursday";
+            weekday[5]="Friday";
+            weekday[6]="saturday";
+            
+            
+            
+            var a=d.getHours();
+            var ampm="AM";
+            if(a>12)
+            {
+                a-=12;
+                ampm="PM";
+            }
+            var b=d.getMinutes();
+            var c=d.getSeconds();
+           document.getElementById("sample").innerHTML="Today is:"+ weekday[d.getDay()] ;
+           document.getElementById("demo").innerHTML="Current Time is:"+ a + " "+ampm+ ":"+" "+ b+":"+ c;
+            
+            
+
+        </script>
+
+
+    </body>
+</html>
