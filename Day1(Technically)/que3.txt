@@ -1,0 +1,89 @@
+Datatypes in JavaScript:
+
+ JavaScript includes primitive and non-primitive data types.
+
+-Primitive Data Types
+	1) String:-
+	    -A string is textual content. It must be enclosed in single or double quotation marks.
+                           Example: String literal assigned to a variable
+                                  var str1 = "Hello World";
+	    -A string can also be treated like zero index based character array.
+	        Example: String as array
+		var str = 'Hello World';
+		str[0] // H
+		str[1] // e
+		str[2] // l
+		str[3] // l
+		str[4] // o
+	
+
+	2)Number:-
+	   -Number type represents integer, float, hexadecimal, octal or exponential value. First character in a                      -Number type must be an integer value and it must not be enclosed in quotation marks.
+	    Example: Number in JavaScript
+	       	  var int = 100;
+		  var float = 100.5;
+		
+
+	3)Boolean:-
+		- Boolean can have only two values, true or false. It is useful in controlling program flow using 	      		  conditional statements like if..else, switch, while, do..while.
+	       Example: Boolean
+		var YES = true;
+  		var NO = false;
+	-The following example demonstrates how a Boolean value controls the program flow using if condition.
+	if(YES)
+	{
+    	alert("This code block will be executed");
+	}
+	if(NO)
+	{
+   	 alert("This code block will not be executed");
+	}
+
+	4)Null:-
+	5)Undefined:-
+
+-Non-primitive Data Type
+	1)Object:-
+		- It is like any other variable, the only difference is that an object holds multiple values in terms 		of properties and methods. Properties can hold values of primitive data types and methods are 		functions.
+		Example:-		
+		var person = { firstName: "John" }; // object with single property
+
+	2)Date:-
+		-JavaScript provides Date object to work with date & time including days, months, years, 		hours, minutes, seconds and milliseconds.
+		Example: Current Local Date
+
+		Date(); //current date
+
+		//or
+
+		var currentDate = new Date(); //current date
+	
+	3)Array:-
+	-Array literal syntax is simple. It takes a list of values separated by a comma and enclosed in square 	brackets.
+	Syntax:
+	var <array-name> = [element0, element1, element2,... elementN];
+	-The following example shows how to define and initialize an array using array literal syntax.
+	Example: Declare and Initialize JS Array
+	var stringArray = ["one", "two", "three"];
+	var numericArray = [1, 2, 3, 4];
+
+
+          * JavaScript is a dynamic or loosely-typed language because a variable can hold value of any data type at any point of time.
+
+           <html>
+              <body>
+	<h1>Demo: Loosely type</h1>
+	
+	 <script>
+		var myVar = 100;
+		myVar = true;
+		myVar = null;
+		myVar = undefined;
+		myVar = "Steve";
+
+		alert(myVar); 
+   	 </script>
+              </body>
+          </html>
+ 
+          output:- Steve

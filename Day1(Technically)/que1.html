@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <h3>Various Console functions with Example</h3>
+    </head>
+        <body>
+            <script>
+                //this function will return the time taken for all the program to execute 
+                console.time('programspan');
+
+                //this function groups the output in a separate block and uses the same label as of time function
+                console.group('section');
+
+                //console.log() method
+                console.log('This is a log function used to print any type on the console');
+
+                //console.error() method 
+                console.error('This function is used to display an error on the console ,if any');
+
+                //console.warn() method
+                console.warn('Displays a warning');
+
+                console.groupEnd('section');
+
+                //console.clear() method and it simply clears the console
+                //console.clear();
+
+                console.timeEnd('programspan');
+
+                //this method generates a table inside a console
+                console.table({1:'Susmita',2:'Manthanwar'});
+                console.table({'a':1, 'b':2});
+
+                //this method is used to count the number that the function is hit by this counting method
+                for(let i=0;i<5;i++)
+                   console.count(i);
+
+                //custom console log example
+                //console.log('%c lets chnage the color'); 
+
+
+            </script>
+        </body>
+    
+</html>
