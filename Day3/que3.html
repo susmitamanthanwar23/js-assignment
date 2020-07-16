@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+</head>
+<body>
+   <script>
+       let marks=prompt("Enter the marks scored between 1 to 100");
+       if(marks>=65 && marks<=100)
+       {
+           console.log("Marks are" +marks+ "and grade is A");
+       }
+       else
+       if(marks>=50 && marks<65)
+       {
+           console.log("Marks are" +marks+ "and grade is B");
+       }
+       else
+       if(marks>=40 && marks<50)
+       {
+        console.log("Marks are" +marks+ "and grade is C"); 
+       }
+       else{
+        console.log("Marks are" +marks+ "and result is Fail");  
+       }
+
+       //Another method for the same result
+
+        let result=(marks>=65 && marks<=100)?"Marks are" +marks+ "and grade is A":
+                    (marks>=50 && marks<65)? "Marks are" +marks+ "and grade is B":
+                   (marks>=40 && marks<50)?"Marks are" +marks+ "and grade is C":"Marks are" +marks+ "and result is Fail";
+
+       console.log(result);
+
+   </script>  
+</body>
+</html>
