@@ -2,21 +2,29 @@
 <html >
 <head>
   
-    <title>Document</title>
+   
 </head>
 <body>
     <script>
-        let n =prompt("enter a positive number");
-        console.log(Math.abs(n));
+         let n =prompt("enter a positive number");
+        //console.log(Math.abs(n));
+       
+        let arr=[];
+        for(i=0;i<=n;i++)
+        {
+           arr[i] =i;
+        }
 
-        let arr=[n];
-        arr.forEach((el)=>{
-            console.log(arr)
+      console.log(arr);
+        
+        let odd = arr.filter(function(el)
+        {
+             return el%2!=0;
         })
+       console.log(odd);
 
-        let odd=arr.filter(el=>el%2!=0);
-        console.log(odd);
-
+       let cubes= odd.map(el=>el**3);
+       console.log(cubes);
     </script>
 </body>
 </html>
