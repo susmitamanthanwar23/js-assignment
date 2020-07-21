@@ -6,6 +6,81 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+    class User{
+            constructor(name,age,email)
+            {
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.coins=0;
+                this.courses=[];
+            }
+
+            login()
+            {
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout()
+            {
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+            getdetails()
+            {
+                console.log(`Name is ${this.name}, Email is ${this.emial}`);
+                return this;
+            }  
+        }
+        class Moderator extends User{
+            constructor(name,age,email,role)
+                {
+                super(name,age,email);
+                this.role=role;
+                }
+
+            addcoins()
+                {
+                  this.coins++;
+                  console.log(` ${this.name} has  ${this.coins} coins`);
+                return this;
+                    
+                }
+
+            removecoins()
+                {
+                  this.coins--;
+                  console.log(` ${this.name} has  ${this.coins} coins now`);
+                return this;
+                    
+                }
+            
+        }
+         class Admin extends Moderator{
+
+            addCourse(user,course)
+            {
+                user.course.push(course);
+                console.log(user);
+
+            }
+            removeCourse(user,course)
+            {
+                user.course.remove(course);
+                console.log(user);
+
+            }
+        }
+        let user1=new User("Sneha",27,"sneha@gmail.com");
+        let mod=new Moderator("Susmita",25,"susmita@gmail.com");
+        let admin=new Admin("Sanket",21,"sanket@gmail.com");
+        let users=[user1,mod,admin];
+
+        users.forEach(element=>{
+            console.log(element);
+        });
     
+    </script>
 </body>
 </html>
