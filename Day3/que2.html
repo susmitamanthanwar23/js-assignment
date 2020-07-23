@@ -5,10 +5,10 @@
 </head>
 <body>
     <script>
-        let OS=prompt("Enter OS name ");
-        let version=prompt("Enter version ");
-        
-        console.log("The OS name is" +OS+ " and the verion is " +version); 
+        let name = prompt("Enter OS name and version");
+        let arr=name.split(" ");
+
+        console.log(`The OS name is ${arr[0]} and version is ${arr[1]}`);
             
            
          
