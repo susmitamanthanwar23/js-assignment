@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Day 6 Assignment</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+        
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+      </style>
+</head>
+<body>
+    <h2 id= "name"> </h2><br>
+    <h4>Question no. 3</h4>
+    <p>Make a webPage that will ask the name of user. Then will display a welcome message on the webpage. Aslo the webPage should also have a Clock.<br>
+    Using the toggle method of classList add a Dark mode feature to the Website.</p>
+    <pre><h3>Current Time i:</h3> <h3 id = "time"></h3></pre>
+
+    <h3>Enable the dark mode click button</h3>
+    <button onclick="darkmode()">Dark Mode toggle</button>
+
+    <script>
+        
+        let name =prompt('Enter your name','name');
+        document.getElementById("name").innerHTML = "Welcome "+ name +"  To The webPage..!!";
+
+
+        // clock Current time display
+
+        const ctime = document.getElementById('time');
+
+        function clock()
+            {
+                let date =new Date();
+                let time =date.toLocaleTimeString();
+                ctime.innerText = time;
+            }
+            setInterval(clock,1000);
+
+
+            // dark mode
+
+        function darkmode()
+        {
+            let dark =document.body;
+            dark.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

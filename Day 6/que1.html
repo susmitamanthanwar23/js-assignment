@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var bgrnd= document.getElementById("background");
+        let colorName = ['blue','yellow','red', 'green']; 
+        var i=0;
+        setInterval(
+            function(){
+                var changeColor = Math.floor(Math.random()*16777215)
+                .toString(16);
+                document.body.style.backgroundColor="#"+changeColor;
+            },5000);
+        
+    </script>
+</head>
+<body>
+   <div id = "background" style="height: 200px;"></div>
+</body>
+</html>
